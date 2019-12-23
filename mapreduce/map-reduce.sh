@@ -5,7 +5,7 @@ cd $DIR
 
 printf "\nCOPY FILE TO HDFS\n"
 
-hdfs dfs -put SalesJan2009.csv /data
+hdfs dfs -put dataset_0_-71_2015.csv /data
 
 printf "\nSETTING EXECUTEABLE PY\n"
 
