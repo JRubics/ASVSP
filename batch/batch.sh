@@ -15,4 +15,6 @@ $SPARK_HOME/bin/spark-submit projekat.py
 
 printf "\nRESULTS\n"
 
-hdfs dfs -cat /projekat/result/*
+hdfs dfs -cat /projekat/result/clouds/*
+hdfs dfs -cat /projekat/result/humidity/*
+hdfs dfs -cat /projekat/result/angle/*
