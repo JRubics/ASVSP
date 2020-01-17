@@ -6,7 +6,7 @@ cd $DIR
 printf "\nCOPY FILE TO HDFS\n"
 
 hdfs dfs -mkdir /projekat
-hdfs dfs -put dataset_test.csv  /projekat/
+hdfs dfs -put dataset_batch.csv  /projekat/
 # hdfs dfs -put mini.csv  /projekat/
 
 printf "\nRUN BATCH\n"

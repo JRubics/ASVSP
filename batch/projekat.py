@@ -13,7 +13,7 @@ conf = SparkConf().setAppName("projekat").setMaster("local")
 sc = SparkContext(conf=conf)
 
 # text_file = sc.textFile(HDFS_NAMENODE + "/projekat/mini.csv")
-text_file = sc.textFile(HDFS_NAMENODE + "/projekat/dataset_test.csv")
+text_file = sc.textFile(HDFS_NAMENODE + "/projekat/dataset_batch.csv")
 clouds = text_file \
     .flatMap(lambda line: line.replace(' ', '\t').split(" ")) \
     .filter(lambda line: float(line.split()[8]) > 0 and float(line.split()[9]) > 0) \
