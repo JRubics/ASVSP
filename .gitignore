@@ -5,3 +5,5 @@
 /batch/dataset_batch.csv
 
 /batch/results/
+
+/docker/producer/dataset2018.csv

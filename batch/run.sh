@@ -10,3 +10,5 @@ docker exec -it spark-master bash -c "rm -rf /rdd"
 docker cp . spark-master:/rdd
 docker exec -it spark-master bash -c "chmod +x /rdd/batch.sh && /rdd/batch.sh"
 docker cp spark-master:/rdd/results .
+
+pipenv run python plot.py
