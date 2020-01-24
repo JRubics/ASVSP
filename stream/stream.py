@@ -35,7 +35,12 @@ if __name__ == "__main__":
     kvs = KafkaUtils.createStream(ssc, zkQuorum, "spark-streaming-consumer", {topic: 1})
     lines = kvs \
         .map(lambda x: "{0} {1}".format(x[0], x[1])) \
-        .map(lambda line: "{0} {1} {2} {3} {4} {5}".format(line.split()[0], line.split()[1], line.split()[2], line.split()[3], round(float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))), 3), "danger" if float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))) > 800 else ""))
+        .map(lambda line: "{0} {1} {2} {3} {4} {5}".format(line.split()[0],
+            line.split()[1],
+            line.split()[2],
+            line.split()[3],
+            round(float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))), 3),
+            "danger" if float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))) > 800 else ""))
 
     lines.pprint()
 

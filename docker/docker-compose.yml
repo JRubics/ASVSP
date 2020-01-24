@@ -136,32 +136,6 @@ services:
     depends_on:
       - zoo
 
-  kafka-rest-proxy:
-    image: confluentinc/cp-kafka-rest:5.3.1
-    container_name: kafka-rest-proxy
-    ports:
-      - "8082:8082"
-    environment:
-      KAFKA_REST_LISTENERS: http://0.0.0.0:8082/
-      KAFKA_REST_HOST_NAME: kafka-rest-proxy
-      KAFKA_REST_BOOTSTRAP_SERVERS: PLAINTEXT://kafka1:19092
-    depends_on:
-      - zoo
-      - kafka1
-
-  kafka-topics-ui:
-    image: landoop/kafka-topics-ui
-    container_name: kafka-topics-ui
-    ports:
-      - "8000:8000"
-    environment:
-      KAFKA_REST_PROXY_URL: "http://kafka-rest-proxy:8082/"
-      PROXY: "true"
-    depends_on:
-      - zoo
-      - kafka1
-      - kafka-rest-proxy
-
   producer:
     build: ./producer
     container_name: producer
