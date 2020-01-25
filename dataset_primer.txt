@@ -1,0 +1,2 @@
+lon lat 	Year	Month	Day	Hour	Minute	Temperature	  DHI	  DNI	  Solar Zenith Angle	Clearsky DHI	Clearsky DNI	Cloud Type	Relative Humidity
+7   -74  	2018	1	    1	  14	  0	      28.4	        296	  407	  41.96	              108	          872	          4	          71.66

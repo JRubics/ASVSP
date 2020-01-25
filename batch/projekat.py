@@ -29,7 +29,7 @@ cloud_names = {
     12: "smoke",
 }
 
-text_file = sc.textFile(HDFS_NAMENODE + "/projekat/dataset_batch.csv")
+text_file = sc.textFile(HDFS_NAMENODE + "/projekat/dataset_test.csv")
 
 clouds = text_file \
     .filter(lambda line: float(line.split()[8]) > 0 and float(line.split()[9]) > 0) \

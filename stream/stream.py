@@ -40,7 +40,7 @@ if __name__ == "__main__":
             line.split()[2],
             line.split()[3],
             round(float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))), 3),
-            "danger" if float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))) > 800 else ""))
+            "warning" if float(line.split()[10]) + (float(line.split()[11]) * (math.cos(float(line.split()[12]) * math.pi / 180))) > 800 else ""))
 
     lines.pprint()
 
