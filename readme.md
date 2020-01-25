@@ -9,6 +9,7 @@ run batch:
   $ ./run.sh
 
 or show plot:
+
   $ pipenv run python plot.py
 
 
